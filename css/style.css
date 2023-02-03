@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.menu-container {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom right, #f8f8f8 30%, #00b7ff 100%);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.200);
+}
+
+.menu-container span {
+    position: absolute;
+    width: 120px;
+    height: 10px;
+    background-color: #1414cc;
+    border-radius: 10px;
+    transition: all 0.50s ease;
+}
+
+.menu-container span:nth-child(1) {
+    transform: translateY(-50px);
+    width: 70px;
+    left: 26px;
+}
+
+.menu-container.active span:nth-child(1) {
+    width: 120px;
+    transform: translateY(0) rotate(40deg);
+    transition-delay: 0.125s;
+}
+
+.menu-container span:nth-child(3) {
+    transform: translateY(50px);
+    width: 50px;
+    left: 26px;
+}
+
+.menu-container.active span:nth-child(3) {
+    width: 120px;
+    transform: translateY(0) rotate(320deg);
+    transition-delay: 0.25s;
+}
+
+.menu-container.active span:nth-child(2) {
+    transform: translateX(160px);
+}
